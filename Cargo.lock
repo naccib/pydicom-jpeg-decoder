@@ -101,7 +101,7 @@ dependencies = [
 
 [[package]]
 name = "pydicom-jpeg-decoder"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "jpeg-decoder",
  "pyo3",
