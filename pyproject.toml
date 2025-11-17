@@ -24,6 +24,8 @@ dev = [
 [tool.maturin]
 python-source = "python"
 exclude = ["tests/*"]
+include = ["LICENSE", "README.md"]
+
 
 [tool.pytest]
 minversion = "9.0"
