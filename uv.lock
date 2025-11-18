@@ -47,6 +47,32 @@ wheels = [
 ]
 
 [[package]]
+name = "attrs"
+version = "25.3.0"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version < '3.9'",
+]
+sdist = { url = "https://files.pythonhosted.org/packages/5a/b0/1367933a8532ee6ff8d63537de4f1177af4bff9f3e829baf7331f595bb24/attrs-25.3.0.tar.gz", hash = "sha256:75d7cefc7fb576747b2c81b4442d4d4a1ce0900973527c011d1030fd3bf4af1b", size = 812032 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/77/06/bb80f5f86020c4551da315d78b3ab75e8228f89f0162f2c3a819e407941a/attrs-25.3.0-py3-none-any.whl", hash = "sha256:427318ce031701fea540783410126f03899a97ffc6f61596ad581ac2e40e3bc3", size = 63815 },
+]
+
+[[package]]
+name = "attrs"
+version = "25.4.0"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version >= '3.11'",
+    "python_full_version == '3.10.*'",
+    "python_full_version == '3.9.*'",
+]
+sdist = { url = "https://files.pythonhosted.org/packages/6b/5c/685e6633917e101e5dcb62b9dd76946cbb57c26e133bae9e0cd36033c0a9/attrs-25.4.0.tar.gz", hash = "sha256:16d5969b87f0859ef33a48b35d55ac1be6e42ae49d5e853b597db70c35c57e11", size = 934251 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/3a/2a/7cc015f5b9f5db42b7d48157e23356022889fc354a2813c15934b7cb5c0e/attrs-25.4.0-py3-none-any.whl", hash = "sha256:adcf7e2a1fb3b36ac48d97835bb6d8ade15b8dcce26aba8bf1d14847b57a3373", size = 67615 },
+]
+
+[[package]]
 name = "backports-asyncio-runner"
 version = "1.2.0"
 source = { registry = "https://pypi.org/simple" }
@@ -381,6 +407,101 @@ wheels = [
 ]
 
 [[package]]
+name = "cyclopts"
+version = "2.9.9"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version < '3.9'",
+]
+dependencies = [
+    { name = "attrs", version = "25.3.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.9'" },
+    { name = "docstring-parser", marker = "python_full_version < '3.9'" },
+    { name = "importlib-metadata", marker = "python_full_version < '3.9'" },
+    { name = "rich", marker = "python_full_version < '3.9'" },
+    { name = "rich-rst", marker = "python_full_version < '3.9'" },
+    { name = "typing-extensions", version = "4.13.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.9'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/61/b6/51022d8b673087262c4bcd1e64c1db3a8ab01510033f7f82a561998e3499/cyclopts-2.9.9.tar.gz", hash = "sha256:11d7bb59be253329ff49a1b9a634676c7ae708605d4975090783b99d081c1a0b", size = 45179 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/08/7c/f1af5b44f581df05009ecc9b15395532fc18c7aa7292b5e98501af25c2db/cyclopts-2.9.9-py3-none-any.whl", hash = "sha256:d0ce956c70f3070e5bc16824ecb5ebba155be45ef4aadbb78ac4753dd99367e3", size = 51062 },
+]
+
+[[package]]
+name = "cyclopts"
+version = "3.24.0"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version == '3.9.*'",
+]
+dependencies = [
+    { name = "attrs", version = "25.4.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.9.*'" },
+    { name = "docstring-parser", marker = "python_full_version == '3.9.*'" },
+    { name = "rich", marker = "python_full_version == '3.9.*'" },
+    { name = "rich-rst", marker = "python_full_version == '3.9.*'" },
+    { name = "typing-extensions", version = "4.15.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.9.*'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/30/ca/7782da3b03242d5f0a16c20371dff99d4bd1fedafe26bc48ff82e42be8c9/cyclopts-3.24.0.tar.gz", hash = "sha256:de6964a041dfb3c57bf043b41e68c43548227a17de1bad246e3a0bfc5c4b7417", size = 76131 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/f0/8b/2c95f0645c6f40211896375e6fa51f504b8ccb29c21f6ae661fe87ab044e/cyclopts-3.24.0-py3-none-any.whl", hash = "sha256:809d04cde9108617106091140c3964ee6fceb33cecdd537f7ffa360bde13ed71", size = 86154 },
+]
+
+[[package]]
+name = "cyclopts"
+version = "4.2.4"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version >= '3.11'",
+    "python_full_version == '3.10.*'",
+]
+dependencies = [
+    { name = "attrs", version = "25.4.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
+    { name = "docstring-parser", marker = "python_full_version >= '3.10'" },
+    { name = "rich", marker = "python_full_version >= '3.10'" },
+    { name = "rich-rst", marker = "python_full_version >= '3.10'" },
+    { name = "tomli", marker = "python_full_version == '3.10.*'" },
+    { name = "typing-extensions", version = "4.15.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.10.*'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/eb/08/f20fe40a5db9cd1c42316de5a26209dd008f30d38eea297f94e744dea463/cyclopts-4.2.4.tar.gz", hash = "sha256:27e1d175df2889aba72cd960c4e34c8b0a501c5b0161e849c72d9fee5903ecbb", size = 149362 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d2/b2/fabcd6020b63b9d9f7a79cfc61b9c03c4e08ccb54f9cf9db9791be5669ef/cyclopts-4.2.4-py3-none-any.whl", hash = "sha256:41054f5e921a4f2b8ab9c839f12a274dec06a19560dc4898ce37cb775ca68ca4", size = 185023 },
+]
+
+[[package]]
+name = "docstring-parser"
+version = "0.17.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/b2/9d/c3b43da9515bd270df0f80548d9944e389870713cc1fe2b8fb35fe2bcefd/docstring_parser-0.17.0.tar.gz", hash = "sha256:583de4a309722b3315439bb31d64ba3eebada841f2e2cee23b99df001434c912", size = 27442 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/55/e2/2537ebcff11c1ee1ff17d8d0b6f4db75873e3b0fb32c2d4a2ee31ecb310a/docstring_parser-0.17.0-py3-none-any.whl", hash = "sha256:cf2569abd23dce8099b300f9b4fa8191e9582dda731fd533daf54c4551658708", size = 36896 },
+]
+
+[[package]]
+name = "docutils"
+version = "0.20.1"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version < '3.9'",
+]
+sdist = { url = "https://files.pythonhosted.org/packages/1f/53/a5da4f2c5739cf66290fac1431ee52aff6851c7c8ffd8264f13affd7bcdd/docutils-0.20.1.tar.gz", hash = "sha256:f08a4e276c3a1583a86dce3e34aba3fe04d02bba2dd51ed16106244e8a923e3b", size = 2058365 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/26/87/f238c0670b94533ac0353a4e2a1a771a0cc73277b88bff23d3ae35a256c1/docutils-0.20.1-py3-none-any.whl", hash = "sha256:96f387a2c5562db4476f09f13bbab2192e764cac08ebbf3a34a95d9b1e4a59d6", size = 572666 },
+]
+
+[[package]]
+name = "docutils"
+version = "0.22.3"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version >= '3.11'",
+    "python_full_version == '3.10.*'",
+    "python_full_version == '3.9.*'",
+]
+sdist = { url = "https://files.pythonhosted.org/packages/d9/02/111134bfeb6e6c7ac4c74594e39a59f6c0195dc4846afbeac3cba60f1927/docutils-0.22.3.tar.gz", hash = "sha256:21486ae730e4ca9f622677b1412b879af1791efcfba517e4c6f60be543fc8cdd", size = 2290153 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/11/a8/c6a4b901d17399c77cd81fb001ce8961e9f5e04d3daf27e8925cb012e163/docutils-0.22.3-py3-none-any.whl", hash = "sha256:bd772e4aca73aff037958d44f2be5229ded4c09927fcf8690c577b66234d6ceb", size = 633032 },
+]
+
+[[package]]
 name = "exceptiongroup"
 version = "1.3.0"
 source = { registry = "https://pypi.org/simple" }
@@ -568,6 +689,18 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/6f/6d/0703ccc57f3a7233505399edb88de3cbd678da106337b9fcde432b65ed60/idna-3.11.tar.gz", hash = "sha256:795dafcc9c04ed0c1fb032c2aa73654d8e8c5023a7df64a53f39190ada629902", size = 194582 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/0e/61/66938bbb5fc52dbdf84594873d5b51fb1f7c7794e9c0f5bd885f30bc507b/idna-3.11-py3-none-any.whl", hash = "sha256:771a87f49d9defaf64091e6e6fe9c18d4833f140bd19464795bc32d966ca37ea", size = 71008 },
+]
+
+[[package]]
+name = "importlib-metadata"
+version = "8.5.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "zipp", version = "3.20.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.9'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/cd/12/33e59336dca5be0c398a7482335911a33aa0e20776128f038019f1a95f1b/importlib_metadata-8.5.0.tar.gz", hash = "sha256:71522656f0abace1d072b9e5481a48f07c138e00f079c38c8f883823f9c26bd7", size = 55304 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/a0/d9/a1e041c5e7caa9a05c925f4bdbdfb7f006d1f74996af53467bc394c97be7/importlib_metadata-8.5.0-py3-none-any.whl", hash = "sha256:45e54197d28b7a7f1559e60b95e7c567032b602131fbd588f1497f47880aa68b", size = 26514 },
 ]
 
 [[package]]
@@ -864,6 +997,38 @@ wheels = [
 ]
 
 [[package]]
+name = "markdown-it-py"
+version = "3.0.0"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version == '3.9.*'",
+    "python_full_version < '3.9'",
+]
+dependencies = [
+    { name = "mdurl", marker = "python_full_version < '3.10'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/38/71/3b932df36c1a044d397a1f92d1cf91ee0a503d91e470cbd670aa66b07ed0/markdown-it-py-3.0.0.tar.gz", hash = "sha256:e3f60a94fa066dc52ec76661e37c851cb232d92f9886b15cb560aaada2df8feb", size = 74596 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/42/d7/1ec15b46af6af88f19b8e5ffea08fa375d433c998b8a7639e76935c14f1f/markdown_it_py-3.0.0-py3-none-any.whl", hash = "sha256:355216845c60bd96232cd8d8c40e8f9765cc86f46880e43a8fd22dc1a1a8cab1", size = 87528 },
+]
+
+[[package]]
+name = "markdown-it-py"
+version = "4.0.0"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version >= '3.11'",
+    "python_full_version == '3.10.*'",
+]
+dependencies = [
+    { name = "mdurl", marker = "python_full_version >= '3.10'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/5b/f5/4ec618ed16cc4f8fb3b701563655a69816155e79e24a17b651541804721d/markdown_it_py-4.0.0.tar.gz", hash = "sha256:cb0a2b4aa34f932c007117b194e945bd74e0ec24133ceb5bac59009cda1cb9f3", size = 73070 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/94/54/e7d793b573f298e1c9013b8c4dade17d481164aa517d1d7148619c2cedbf/markdown_it_py-4.0.0-py3-none-any.whl", hash = "sha256:87327c59b172c5011896038353a81343b6754500a08cd7a4973bb48c6d578147", size = 87321 },
+]
+
+[[package]]
 name = "matplotlib"
 version = "3.7.5"
 source = { registry = "https://pypi.org/simple" }
@@ -1072,6 +1237,15 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/58/8f/76d5dc21ac64a49e5498d7f0472c0781dae442dd266a67458baec38288ec/matplotlib-3.10.7-pp311-pypy311_pp73-macosx_10_15_x86_64.whl", hash = "sha256:15112bcbaef211bd663fa935ec33313b948e214454d949b723998a43357b17b0", size = 8252283 },
     { url = "https://files.pythonhosted.org/packages/27/0d/9c5d4c2317feb31d819e38c9f947c942f42ebd4eb935fc6fd3518a11eaa7/matplotlib-3.10.7-pp311-pypy311_pp73-macosx_11_0_arm64.whl", hash = "sha256:d2a959c640cdeecdd2ec3136e8ea0441da59bcaf58d67e9c590740addba2cb68", size = 8116733 },
     { url = "https://files.pythonhosted.org/packages/9a/cc/3fe688ff1355010937713164caacf9ed443675ac48a997bab6ed23b3f7c0/matplotlib-3.10.7-pp311-pypy311_pp73-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:3886e47f64611046bc1db523a09dd0a0a6bed6081e6f90e13806dd1d1d1b5e91", size = 8693919 },
+]
+
+[[package]]
+name = "mdurl"
+version = "0.1.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/d6/54/cfe61301667036ec958cb99bd3efefba235e65cdeb9c84d24a8293ba1d90/mdurl-0.1.2.tar.gz", hash = "sha256:bb413d29f5eea38f31dd4754dd7377d4465116fb207585f97bf925588687c1ba", size = 8729 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b3/38/89ba8ad64ae25be8de66a6d463314cf1eb366222074cfda9ee839c56a4b4/mdurl-0.1.2-py3-none-any.whl", hash = "sha256:84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8", size = 9979 },
 ]
 
 [[package]]
@@ -1660,6 +1834,53 @@ wheels = [
 ]
 
 [[package]]
+name = "polars"
+version = "1.8.2"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version < '3.9'",
+]
+sdist = { url = "https://files.pythonhosted.org/packages/3d/75/2196c26fe049ecce55a0fa87b22ab3d9477bc9bab38116ed04854fc65ecb/polars-1.8.2.tar.gz", hash = "sha256:42f69277d5be2833b0b826af5e75dcf430222d65c9633872856e176a0bed27a0", size = 4010537 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b5/8b/6829e22a0f4c6e754c2e2b5d81025ab14d7b214018119762f52bad7325aa/polars-1.8.2-cp38-abi3-macosx_10_12_x86_64.whl", hash = "sha256:114be1ebfb051b794fb9e1f15999430c79cc0824595e237d3f45632be3e56d73", size = 31165933 },
+    { url = "https://files.pythonhosted.org/packages/8f/cd/5d6b837f42c1b6d87012beca940a075e450a352ab717a649000c2ec57d71/polars-1.8.2-cp38-abi3-macosx_11_0_arm64.whl", hash = "sha256:e4fc36cfe48972d4c5be21a7cb119d6378fb7af0bb3eeb61456b66a1f43228e3", size = 27488552 },
+    { url = "https://files.pythonhosted.org/packages/a7/f3/c317b1bc6759d1ec343c25d5ebd376a07a2e1fd2bd04fdc07ce6b2a855c4/polars-1.8.2-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:67c1e448d6e38697650b22dd359f13c40b567c0b66686c8602e4367400e87801", size = 32548666 },
+    { url = "https://files.pythonhosted.org/packages/1d/df/5ccf44218728caecda9f555879b40fe4ab34ff629c81b9117a1107437fdc/polars-1.8.2-cp38-abi3-manylinux_2_24_aarch64.whl", hash = "sha256:570ee86b033dc5a6dbe2cb0df48522301642f304dda3da48f53d7488899a2206", size = 29187225 },
+    { url = "https://files.pythonhosted.org/packages/9c/45/77e4fda23368907c06bf70fc722de28d442c5087bbc8a60c29b8396750ea/polars-1.8.2-cp38-abi3-win_amd64.whl", hash = "sha256:ce1a1c1e2150ffcc44a5f1c461d738e1dcd95abbd0f210af0271c7ac0c9f7ef9", size = 32394690 },
+]
+
+[[package]]
+name = "polars"
+version = "1.35.2"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version >= '3.11'",
+    "python_full_version == '3.10.*'",
+    "python_full_version == '3.9.*'",
+]
+dependencies = [
+    { name = "polars-runtime-32", marker = "python_full_version >= '3.9'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/fa/43/09d4738aa24394751cb7e5d1fc4b5ef461d796efcadd9d00c79578332063/polars-1.35.2.tar.gz", hash = "sha256:ae458b05ca6e7ca2c089342c70793f92f1103c502dc1b14b56f0a04f2cc1d205", size = 694895 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b4/9a/24e4b890c7ee4358964aa92c4d1865df0e8831f7df6abaa3a39914521724/polars-1.35.2-py3-none-any.whl", hash = "sha256:5e8057c8289ac148c793478323b726faea933d9776bd6b8a554b0ab7c03db87e", size = 783597 },
+]
+
+[[package]]
+name = "polars-runtime-32"
+version = "1.35.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/cb/75/ac1256ace28c832a0997b20ba9d10a9d3739bd4d457c1eb1e7d196b6f88b/polars_runtime_32-1.35.2.tar.gz", hash = "sha256:6e6e35733ec52abe54b7d30d245e6586b027d433315d20edfb4a5d162c79fe90", size = 2694387 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/66/de/a532b81e68e636483a5dd764d72e106215543f3ef49a142272b277ada8fe/polars_runtime_32-1.35.2-cp39-abi3-macosx_10_12_x86_64.whl", hash = "sha256:e465d12a29e8df06ea78947e50bd361cdf77535cd904fd562666a8a9374e7e3a", size = 40524507 },
+    { url = "https://files.pythonhosted.org/packages/2d/0b/679751ea6aeaa7b3e33a70ba17f9c8150310792583f3ecf9bb1ce15fe15c/polars_runtime_32-1.35.2-cp39-abi3-macosx_11_0_arm64.whl", hash = "sha256:ef2b029b78f64fb53f126654c0bfa654045c7546bd0de3009d08bd52d660e8cc", size = 36700154 },
+    { url = "https://files.pythonhosted.org/packages/e2/c8/fd9f48dd6b89ae9cff53d896b51d08579ef9c739e46ea87a647b376c8ca2/polars_runtime_32-1.35.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:85dda0994b5dff7f456bb2f4bbd22be9a9e5c5e28670e23fedb13601ec99a46d", size = 41317788 },
+    { url = "https://files.pythonhosted.org/packages/67/89/e09d9897a70b607e22a36c9eae85a5b829581108fd1e3d4292e5c0f52939/polars_runtime_32-1.35.2-cp39-abi3-manylinux_2_24_aarch64.whl", hash = "sha256:3b9006902fc51b768ff747c0f74bd4ce04005ee8aeb290ce9c07ce1cbe1b58a9", size = 37850590 },
+    { url = "https://files.pythonhosted.org/packages/dc/40/96a808ca5cc8707894e196315227f04a0c82136b7fb25570bc51ea33b88d/polars_runtime_32-1.35.2-cp39-abi3-win_amd64.whl", hash = "sha256:ddc015fac39735592e2e7c834c02193ba4d257bb4c8c7478b9ebe440b0756b84", size = 41290019 },
+    { url = "https://files.pythonhosted.org/packages/f4/d1/8d1b28d007da43c750367c8bf5cb0f22758c16b1104b2b73b9acadb2d17a/polars_runtime_32-1.35.2-cp39-abi3-win_arm64.whl", hash = "sha256:6861145aa321a44eda7cc6694fb7751cb7aa0f21026df51b5faa52e64f9dc39b", size = 36955684 },
+]
+
+[[package]]
 name = "pydicom"
 version = "2.4.4"
 source = { registry = "https://pypi.org/simple" }
@@ -1695,6 +1916,9 @@ dependencies = [
 
 [package.dev-dependencies]
 dev = [
+    { name = "cyclopts", version = "2.9.9", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.9'" },
+    { name = "cyclopts", version = "3.24.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.9.*'" },
+    { name = "cyclopts", version = "4.2.4", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
     { name = "httpx" },
     { name = "matplotlib", version = "3.7.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.9'" },
     { name = "matplotlib", version = "3.9.4", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.9.*'" },
@@ -1703,8 +1927,12 @@ dev = [
     { name = "numpy", version = "2.0.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.9.*'" },
     { name = "numpy", version = "2.2.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.10.*'" },
     { name = "numpy", version = "2.3.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
+    { name = "polars", version = "1.8.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.9'" },
+    { name = "polars", version = "1.35.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.9'" },
     { name = "pylibjpeg", version = "2.0.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
     { name = "pylibjpeg", version = "2.1.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
+    { name = "pylibjpeg-libjpeg", version = "2.2.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.9'" },
+    { name = "pylibjpeg-libjpeg", version = "2.3.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.9'" },
     { name = "pytest", version = "8.3.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.9'" },
     { name = "pytest", version = "8.4.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.9.*'" },
     { name = "pytest", version = "9.0.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
@@ -1718,10 +1946,13 @@ requires-dist = [{ name = "pydicom", specifier = ">=2.4.4" }]
 
 [package.metadata.requires-dev]
 dev = [
+    { name = "cyclopts", specifier = ">=2.9.9" },
     { name = "httpx", specifier = ">=0.28.1" },
     { name = "matplotlib", specifier = ">=3.7.5" },
     { name = "numpy", specifier = ">=1.24.4" },
+    { name = "polars", specifier = ">=1.8.2" },
     { name = "pylibjpeg", specifier = ">=2.0.1" },
+    { name = "pylibjpeg-libjpeg", specifier = ">=2.2.0" },
     { name = "pytest", specifier = ">=8.3.5" },
     { name = "pytest-asyncio", specifier = ">=0.24.0" },
 ]
@@ -1767,6 +1998,98 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/1a/39/51c543a27592f3e9a92a3769d4cb1ef675488b79a90fef56af9071358b07/pylibjpeg-2.1.0.tar.gz", hash = "sha256:2decda24982394533f16f1c6a17a6242f3391b95f69fac56c6a598a6b1362105", size = 22074 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/3c/31/86c111e81c113e74ac1b0afde27755088b2db394579370c893d252d9615a/pylibjpeg-2.1.0-py3-none-any.whl", hash = "sha256:25df9496a69e64e98c887fddee12a1271e275b5f74ba804f9bf98a08bb80993e", size = 25472 },
+]
+
+[[package]]
+name = "pylibjpeg-libjpeg"
+version = "2.2.0"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version < '3.9'",
+]
+dependencies = [
+    { name = "numpy", version = "1.24.4", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.9'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/95/5b/009cd2e7598d0522e58a71dc0c286412ff7f41eab1016e2912f1196aeaac/pylibjpeg_libjpeg-2.2.0.tar.gz", hash = "sha256:ad2eec82858baa2bf7765c1c0cf11901cc5f0ed60a98ee435723aaa4607adeb9", size = 671030 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/71/7c/efe1c5caae085b40153ffbb78d829b0a6832a4fc5b86a28bd66aa3fa4663/pylibjpeg_libjpeg-2.2.0-cp310-cp310-macosx_12_0_x86_64.whl", hash = "sha256:84b1c7767b86993339d051321fc27a72753d37fb335b66a5d1c6a84f7adfda80", size = 677370 },
+    { url = "https://files.pythonhosted.org/packages/e5/90/f2a84d961748f976b3350c09a16e8795b39483f7a4102ed287c6b55f028c/pylibjpeg_libjpeg-2.2.0-cp310-cp310-macosx_14_0_arm64.whl", hash = "sha256:020121ed7ef98cd63cba9d0dcc913f105ce5cbcd43ff2a1a5e64d4aed1158033", size = 596195 },
+    { url = "https://files.pythonhosted.org/packages/35/ae/1a502a3bb93c44dbec3225f9cbfc7a1d8763f3243f92c58d259c72b94a28/pylibjpeg_libjpeg-2.2.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:93f156a2f0a79e765182c87fd056b28678b9d8b53af64d5c189e59f58efd7920", size = 3274417 },
+    { url = "https://files.pythonhosted.org/packages/68/99/74ed8f53c3ab0992742ea4e5a44c0bf477616952f4f84eef1d6f503855a0/pylibjpeg_libjpeg-2.2.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:9647254f4fb884bbe8c42fd136276890c052419a7049c4861763c96eab99de13", size = 3382246 },
+    { url = "https://files.pythonhosted.org/packages/0e/ea/8d18b1772636a819b53bd82d8d4f8b52924432832d25cbaedd2402f15217/pylibjpeg_libjpeg-2.2.0-cp310-cp310-win32.whl", hash = "sha256:9b78ad3efd58d5bf9dda6ad493c4a0fa07b3dd070d5ae7a7f0e5bdd53cadad8d", size = 730152 },
+    { url = "https://files.pythonhosted.org/packages/1a/6b/ee319bb5035dc9e2eeb69a42f367979b712693437f34306ac4128e32c609/pylibjpeg_libjpeg-2.2.0-cp310-cp310-win_amd64.whl", hash = "sha256:3af59ce9d91e6e2cac115e1348b165d1f130dfceef64ea8bb5d181b427c4580a", size = 743270 },
+    { url = "https://files.pythonhosted.org/packages/7b/0f/d39fd6e478ec2588c33172e9d578eda5614fc21ad610b72268efe23b2d83/pylibjpeg_libjpeg-2.2.0-cp311-cp311-macosx_12_0_x86_64.whl", hash = "sha256:82f6503f4a9dce3cc920c871c98dcaf144687e1ff7cf0d8ece0804ecef700682", size = 677346 },
+    { url = "https://files.pythonhosted.org/packages/0f/44/fc3d40584553ff9c17e1c061cfef14a0838dc8755fc0ec46ad4f59fc208c/pylibjpeg_libjpeg-2.2.0-cp311-cp311-macosx_14_0_arm64.whl", hash = "sha256:2188edd971695848adc1521fd0e55f382780914b97cbe995f3bed6e7e6d50536", size = 596155 },
+    { url = "https://files.pythonhosted.org/packages/31/d4/92fe3ac4c3e1e9b3538a67d44d88f67f70f30929a6c39384c5f3345ddd6c/pylibjpeg_libjpeg-2.2.0-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:8ce1d6a8c65bc75f3b12581e0aadfe17d7751dbebc655638ec53d4056db41c3c", size = 3285184 },
+    { url = "https://files.pythonhosted.org/packages/fa/07/7b77050c025531b984fead572cd503901385e059e9ec66e631dfeae67fee/pylibjpeg_libjpeg-2.2.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:5b8a875b25d8278b1c2f7a34fa3154e23c06b6e5835d007f80efb8dfa549cf8e", size = 3394795 },
+    { url = "https://files.pythonhosted.org/packages/5f/1b/f5bca882e2a7d6614fd68f2c523368da93200c8b4337b1540c4b1843751c/pylibjpeg_libjpeg-2.2.0-cp311-cp311-win32.whl", hash = "sha256:6be673f9845a879f51991e09d98e6491a373a252485d7c63413e27cb138b0f98", size = 729951 },
+    { url = "https://files.pythonhosted.org/packages/03/ed/ec1d3a9deab141491bf709f6dc131901f9447a87736356e6b1f270e394aa/pylibjpeg_libjpeg-2.2.0-cp311-cp311-win_amd64.whl", hash = "sha256:60df7567b1875f36fec1019910e0d92e627134663991d79f5999c1f617dcee9d", size = 743641 },
+    { url = "https://files.pythonhosted.org/packages/3d/7d/672cad03fa87538a3e7db9c4fafcd38e4537dd40b71922bf7e399047b95f/pylibjpeg_libjpeg-2.2.0-cp312-cp312-macosx_12_0_x86_64.whl", hash = "sha256:f749dabb5b90a91ae4b65cc115285072d04761c45777d915e07648aaf83d1ee6", size = 677462 },
+    { url = "https://files.pythonhosted.org/packages/0b/d3/316156ad5b49851ada770a42cab017d55a4a1b2c9b5ce36d78f45a924f94/pylibjpeg_libjpeg-2.2.0-cp312-cp312-macosx_14_0_arm64.whl", hash = "sha256:7fe96435151462d149fc9c0d3842b2ff6529592493356fec6bbbd5ad7dc0b63b", size = 596055 },
+    { url = "https://files.pythonhosted.org/packages/cc/e5/7d34d305eacd4e42955d5d448914a7fe5adde3fdf4fbf325b2dc69d64ba8/pylibjpeg_libjpeg-2.2.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:5df50e8d7eb08558e91ad42d64ad2e3949b5610b8e193e7fe579c236b14a1755", size = 3288993 },
+    { url = "https://files.pythonhosted.org/packages/3e/50/7e3917964ba576542bb30ecb8dd78f659ef3c2959e0f280e0837575ee3f2/pylibjpeg_libjpeg-2.2.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:d826ed2b79a9dd42d14cb521a02720d9ca3a77c98745096b2c01e75ad39ea599", size = 3407331 },
+    { url = "https://files.pythonhosted.org/packages/91/aa/ce38a72fed398ac36d79e7c207e5774086266c1b9a6ff3e680ce275cab54/pylibjpeg_libjpeg-2.2.0-cp312-cp312-win32.whl", hash = "sha256:b714cf7e279a318b3535b063d6537f62334e4d13a0571ed6bee254129a9d75cf", size = 729917 },
+    { url = "https://files.pythonhosted.org/packages/50/e2/a05b526ba04dafa3385e148632bb7df94f54037442c9e2107879cad37237/pylibjpeg_libjpeg-2.2.0-cp312-cp312-win_amd64.whl", hash = "sha256:fc2dfdff7e2ca04850c7e7fe8134e36b58ebdfef61b5144e1b6676cd04a42841", size = 743666 },
+    { url = "https://files.pythonhosted.org/packages/7e/e0/2909b64f87d0924db5694e620f91111e58dc83ad55d1500546219d6ee2d0/pylibjpeg_libjpeg-2.2.0-cp38-cp38-macosx_12_0_x86_64.whl", hash = "sha256:901ba8c2dddcd2b28597d6bc58928612058b826a7d2a4b05e1850eea59ea4687", size = 677437 },
+    { url = "https://files.pythonhosted.org/packages/f5/77/00894181b241a32cbb34fe6edd69f62826e06afd1d22ec20e629d2f0bf83/pylibjpeg_libjpeg-2.2.0-cp38-cp38-macosx_14_0_x86_64.whl", hash = "sha256:2bf2975b6fe1ff654248bf1bb5953b4b0f568af482c590b2df546f356319c7ad", size = 596473 },
+    { url = "https://files.pythonhosted.org/packages/45/84/1f0c98ef30697db925c31972818c243d178e149a19f4cddbff5aee15d337/pylibjpeg_libjpeg-2.2.0-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:e81f811be510a7d4278e2a48a7225732a2dba35149967c6ed5cdef5efbfcb8f2", size = 3274357 },
+    { url = "https://files.pythonhosted.org/packages/5e/d7/fdc7a68dcc0bd17a7c85c24f9038c96c26619621de9ffd534818f1a0b891/pylibjpeg_libjpeg-2.2.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:b7839a6376f9d293c42e79597400290496567a2504d7c95280fe2b8bf0d994ed", size = 3382128 },
+    { url = "https://files.pythonhosted.org/packages/05/90/db6df394f98ac6ac5ee3d40eb1e1ae58c6c6d79d74655d217f61c082f499/pylibjpeg_libjpeg-2.2.0-cp38-cp38-win32.whl", hash = "sha256:dbf5722bc4e8866448864a6c7855fd75b697fb34644bcde17ff9e2bffb05e023", size = 731130 },
+    { url = "https://files.pythonhosted.org/packages/5f/f7/e1d989bdbaa695212329b296e70fbfb14e224d73940e7c316158958e1717/pylibjpeg_libjpeg-2.2.0-cp38-cp38-win_amd64.whl", hash = "sha256:17e78b35791c5056c6d6b6470fb770cb9d5becdd29698b7a0bd6cc438a4a3575", size = 744299 },
+    { url = "https://files.pythonhosted.org/packages/52/fa/4921e26e2a67dce823146dca7789ead3a86272828fce88519daf2d6414e8/pylibjpeg_libjpeg-2.2.0-cp39-cp39-macosx_12_0_x86_64.whl", hash = "sha256:7180557325c64df066e1fcbf4c8ab6a23e49bb37b91e7fa4cfed24da9f99d58a", size = 677365 },
+    { url = "https://files.pythonhosted.org/packages/57/d5/be84a3fd1d7ace0958fddc2e0f29100429264106d76b9e48ec8c9ecaeb8a/pylibjpeg_libjpeg-2.2.0-cp39-cp39-macosx_14_0_arm64.whl", hash = "sha256:2a476d31ecd13de14dbb0bee5abfb4d5850cc35af62638166d1c6858552ff3cf", size = 596177 },
+    { url = "https://files.pythonhosted.org/packages/84/0e/8d3785979c85d98e02d08cde6857cf1447abe3b56d1be6c3fd67f03f5db2/pylibjpeg_libjpeg-2.2.0-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:e4459adc0fa511ce598b1da24564cfe38b76f28f1f9e081b2a62b6466f8e110a", size = 3274017 },
+    { url = "https://files.pythonhosted.org/packages/4f/60/d8b27a96ccd3b1c4e692b505ddc673cb2c511027631fd52bed58c2db4497/pylibjpeg_libjpeg-2.2.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:4cb80d164d0fe1f69b7daa0959149df5b956cfe49bc16d4c051c5481e330badd", size = 3382163 },
+    { url = "https://files.pythonhosted.org/packages/8d/f2/8923c66cf92b3a7dad6e871261dafdb41ef1e08420c8491470a36de62a75/pylibjpeg_libjpeg-2.2.0-cp39-cp39-win32.whl", hash = "sha256:40c86b7821e3c38a02119bc334d0b454f30377f828777b0fa868a43ae544409c", size = 730126 },
+    { url = "https://files.pythonhosted.org/packages/ba/a2/2dbf9fa8c5118cbf91ac004670674411df6e4731d8294ded6686aa0b71b9/pylibjpeg_libjpeg-2.2.0-cp39-cp39-win_amd64.whl", hash = "sha256:432fa36110b7d961adc8707379a2e4b886427f4c7fff4156807a519ffb0a5798", size = 743252 },
+]
+
+[[package]]
+name = "pylibjpeg-libjpeg"
+version = "2.3.0"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version >= '3.11'",
+    "python_full_version == '3.10.*'",
+    "python_full_version == '3.9.*'",
+]
+dependencies = [
+    { name = "numpy", version = "2.0.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.9.*'" },
+    { name = "numpy", version = "2.2.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.10.*'" },
+    { name = "numpy", version = "2.3.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/6a/39/d44c4124d8e97a3d5b5e87da5d5f096e010eb83670351bc0e9c77c0febd5/pylibjpeg_libjpeg-2.3.0.tar.gz", hash = "sha256:ffb736acee1dfd446f387d45dfec83a144c7971e5cde290d9aafefa5dee99dd0", size = 671494 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b3/4a/2a86148fd709dd25bdec742861183aa01d7f824bd6d436855eedc09ce6a7/pylibjpeg_libjpeg-2.3.0-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:1c403dddfd74b1e27abbd330b12aa4943657bfe0c3cd822d683f21d62ffafd95", size = 677607 },
+    { url = "https://files.pythonhosted.org/packages/b4/fc/4ef52e7e0346216008e62f3a5626170f6d2971732fe79312e7aee2678765/pylibjpeg_libjpeg-2.3.0-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:1415e5af1a1b03bc26da1992e1ff184a0fd71ea375d004e438146b60b2dd6605", size = 602250 },
+    { url = "https://files.pythonhosted.org/packages/f3/69/aaacfb5028513fc7b6b818c2dd9dc41e32ffe4d08b0d3a7bd45c9df2577a/pylibjpeg_libjpeg-2.3.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:1128b81b53c296d1f9ef7eda39a7f7f2d2cb3a29a4d9ba029f91a6877962069f", size = 3274332 },
+    { url = "https://files.pythonhosted.org/packages/8f/69/6a64511076aed93ebf15b857c23d8eed272ae725405a9ca233915121a00e/pylibjpeg_libjpeg-2.3.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:fa36f121fac22646e6e9f2d8da9597cd8622f664e4144b74f2425d2c71b5e5ac", size = 3382454 },
+    { url = "https://files.pythonhosted.org/packages/c8/f6/28e42af9bc4dfbc0ed0d3041c6abec4e7e937f16b2e38839a4b6a74ee58f/pylibjpeg_libjpeg-2.3.0-cp310-cp310-win32.whl", hash = "sha256:15ec699428061920dfa066ec3091d0600bda650fe353521c2c8199fd37ae0ed5", size = 730361 },
+    { url = "https://files.pythonhosted.org/packages/c9/31/84c1830a290ec30248a71090bc660fff89b7fc3fe9053783046dee4c4f5f/pylibjpeg_libjpeg-2.3.0-cp310-cp310-win_amd64.whl", hash = "sha256:86974c11925866217e4d1b525054124e5e6f4035fcedf0638b8c9e7c307e1767", size = 743561 },
+    { url = "https://files.pythonhosted.org/packages/fc/cd/15ca02e0d3fde019c50bca58a7a7fbdc022f800e0b574b7ea701a0168bc2/pylibjpeg_libjpeg-2.3.0-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:b5333e5a2ea6654212a28270eb8dbf554b481eafda13bbab6881ee9b73830db0", size = 677616 },
+    { url = "https://files.pythonhosted.org/packages/23/74/09f0f9d73ddc73fca272eb462cdecb28179a2d599116ebdb9e9a738a0c91/pylibjpeg_libjpeg-2.3.0-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:a345fc2e954fa4068e4b6a962ca603af12932712ae07c80eab4c215dc90cc98d", size = 602170 },
+    { url = "https://files.pythonhosted.org/packages/0a/5e/8b7ac82a99e12f5de3611d9b392e649a5fd623933cdccdd42dae2f0a20dc/pylibjpeg_libjpeg-2.3.0-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:1701ab9f0b8a2c1670dc1e407fad77a3d5f1d4233331aa24f001891c73e950bd", size = 3285694 },
+    { url = "https://files.pythonhosted.org/packages/a4/bd/20b0651884b620887ef26917cb98cd33de51e1bf7ae7e886c0020764d5c7/pylibjpeg_libjpeg-2.3.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:2c142de3ba0ecc18b54517c4b63de5f9cae45cbf6a4b457ab18059af05e7f2f7", size = 3394991 },
+    { url = "https://files.pythonhosted.org/packages/9b/9b/47ba41fef1133b089b2e311acbc356746d8f958a7ad1b7d1250c6af919d7/pylibjpeg_libjpeg-2.3.0-cp311-cp311-win32.whl", hash = "sha256:5ac15f5b9d146a3e8dd4d27c51079388efbcff7f222495c86ef708adad2ca2de", size = 730215 },
+    { url = "https://files.pythonhosted.org/packages/18/3b/f2cf1a60872482804c17f357699247c3fe1f59825f7898b1c92c23dc2bde/pylibjpeg_libjpeg-2.3.0-cp311-cp311-win_amd64.whl", hash = "sha256:ebd5cd0bf332aee524d23780b5d593aabdc420571f6d4653b130b15e0c89562f", size = 744080 },
+    { url = "https://files.pythonhosted.org/packages/81/84/57e1742d727b3e7bf0c8ad99cd8c0daf79be44fff89c70f051b28f6edec8/pylibjpeg_libjpeg-2.3.0-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:7461d83d23412fd5596f42858fa414e4ac48632160e17d77875f5fd6b4925af9", size = 676306 },
+    { url = "https://files.pythonhosted.org/packages/18/31/2b55e7f821bfe37cbf5805441ea339c9b50b8159062e06efca84d23d64c5/pylibjpeg_libjpeg-2.3.0-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:86ef2285ffafcce6c492738c5f707c0a7141fb8f6e0a3392a2495f653965379f", size = 602273 },
+    { url = "https://files.pythonhosted.org/packages/15/8a/585b966385c2a0817b8699cfd4aea85e71fc02f4da3337e473b2eca83d60/pylibjpeg_libjpeg-2.3.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:61e433d3e94e3a66c303fc82b354489abb79487659ca681c62365d6e6d847470", size = 3289076 },
+    { url = "https://files.pythonhosted.org/packages/79/14/449696a3a4527a1e6a6bac2b4eb0f6a9b512a94a56bbaf1946db06a48122/pylibjpeg_libjpeg-2.3.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:a630e38fd85aad11d0cec247d42d4a4bac86f2614b6eade2619ef821627ad8bb", size = 3407533 },
+    { url = "https://files.pythonhosted.org/packages/e5/5e/bfc26cfdd692ae0a051f4e3fda0930ef024782e84402a88584211656f01e/pylibjpeg_libjpeg-2.3.0-cp312-cp312-win32.whl", hash = "sha256:865cb985fc0671908881d54455fc6a72cfe02f6f047f9330f4ba8852b81ed7c0", size = 730091 },
+    { url = "https://files.pythonhosted.org/packages/68/86/415cc7676219f581f54ca7340d77fa0dd4f0157057f59ead33a9d916c2b3/pylibjpeg_libjpeg-2.3.0-cp312-cp312-win_amd64.whl", hash = "sha256:05d04602b81fa9eb8c33147cf54224725141358f8bf66fd2677bbef5c0e19a48", size = 743955 },
+    { url = "https://files.pythonhosted.org/packages/40/42/78fe92094c6e850fd465375cd86efa708153ce60748a89f499b4c26b282c/pylibjpeg_libjpeg-2.3.0-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:df5db32f1ddfb47c30de9613ace38a0e685f75bf30bd42594c8d54057e5fb8a9", size = 676021 },
+    { url = "https://files.pythonhosted.org/packages/f7/dc/eb4e1882cc745c5b3f8c8cca6c3a0317b2b0ec22e7e483219f4e1e3a6704/pylibjpeg_libjpeg-2.3.0-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:87f334baddb5f7606cb999e3c96e900d25a320b35bf3c0f5061fb2679e876841", size = 600982 },
+    { url = "https://files.pythonhosted.org/packages/ba/39/cbe60564dc0033ff45cd1a3756d58817bc3bf4100b5ce0c8f4f9bb3b33f8/pylibjpeg_libjpeg-2.3.0-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:5acf60b2d531bafccc5d8edabd59fc4c542d835ef8772392d6690a994ca9aef0", size = 3281365 },
+    { url = "https://files.pythonhosted.org/packages/45/55/8873e0d29ce163acecb035b642c7b5bc04972489248f0ad60ebe47dd90e5/pylibjpeg_libjpeg-2.3.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:7744848b239e969162ad65dd2bc7470e14d9eb324ee26d519bd8012fb8e237b8", size = 3401123 },
+    { url = "https://files.pythonhosted.org/packages/a5/01/6eed5b15ccdb21e6898815d482cda70987e34ff987f30f5bc5e5af16f5eb/pylibjpeg_libjpeg-2.3.0-cp313-cp313-win32.whl", hash = "sha256:ec974e854f220714d70e51ee02c832bbdb04bba41007fb962b209622560157fe", size = 729881 },
+    { url = "https://files.pythonhosted.org/packages/f4/b4/8606414416b01233f30f99d69ed1840d8ffa3e04ffc2b73a026fbada87a2/pylibjpeg_libjpeg-2.3.0-cp313-cp313-win_amd64.whl", hash = "sha256:0b8469237b9b0600cff7af4cf570689667b0e542e10ed9d5a2defe6355a84e60", size = 743805 },
+    { url = "https://files.pythonhosted.org/packages/72/1c/288e915febbfd5df2df075e13fcf818a3bd1f6bfadeacf04cd94ccee12b8/pylibjpeg_libjpeg-2.3.0-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:05d9e3511d303a47581ba45e6c7aab911eea7a3e823d353a5af5adf9685f60e7", size = 677644 },
+    { url = "https://files.pythonhosted.org/packages/c9/e3/8ab0c0d523c2d863c59f2de6d15cb516079eb67050ed14b0a6d09ca41068/pylibjpeg_libjpeg-2.3.0-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:70f5466458acfc45fd786e43bd43930ad0eaecaf1017dc56850e9f86524bb2ca", size = 602252 },
+    { url = "https://files.pythonhosted.org/packages/0e/82/5ccac23ce311bcd9238cb6b535e234c4c60c2492f7ece0b42e4684ceef01/pylibjpeg_libjpeg-2.3.0-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:51d036aa961cf3561986598408ddd48af6c5789918eea64282774d04469668f5", size = 3273540 },
+    { url = "https://files.pythonhosted.org/packages/ee/bf/1d70a76b999c33944467e390000aa5f8bc869ab3f508406ae978745f87e4/pylibjpeg_libjpeg-2.3.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:c20ba487553ddb51ae4f5627b10699f9b0260625a19e5ce16c2c3e8dc760c391", size = 3382397 },
+    { url = "https://files.pythonhosted.org/packages/e2/e0/9b5c27302735ad792d43c00afe041ee102f1861d3dffaa81ea7faf5a7f60/pylibjpeg_libjpeg-2.3.0-cp39-cp39-win32.whl", hash = "sha256:a90f5e6eb8f19bab73d932bcb20316b0bd026bc6308c94dcf9fb1826d830e115", size = 730348 },
+    { url = "https://files.pythonhosted.org/packages/77/12/1757a5502ace9e64abe985d7bac971136d1b40fde26d5e02b1284142c9f5/pylibjpeg_libjpeg-2.3.0-cp39-cp39-win_amd64.whl", hash = "sha256:5160f84bb88c0e59a2bcd51fd5a5e98a32c156c9380a583fbbfa8157e4526e98", size = 743621 },
 ]
 
 [[package]]
@@ -1918,6 +2241,34 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/66/c0/0c8b6ad9f17a802ee498c46e004a0eb49bc148f2fd230864601a86dcf6db/python-dateutil-2.9.0.post0.tar.gz", hash = "sha256:37dd54208da7e1cd875388217d5e00ebd4179249f90fb72437e91a35459a0ad3", size = 342432 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/ec/57/56b9bcc3c9c6a792fcbaf139543cee77261f3651ca9da0c93f5c1221264b/python_dateutil-2.9.0.post0-py2.py3-none-any.whl", hash = "sha256:a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427", size = 229892 },
+]
+
+[[package]]
+name = "rich"
+version = "14.2.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "markdown-it-py", version = "3.0.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+    { name = "markdown-it-py", version = "4.0.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
+    { name = "pygments" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/fb/d2/8920e102050a0de7bfabeb4c4614a49248cf8d5d7a8d01885fbb24dc767a/rich-14.2.0.tar.gz", hash = "sha256:73ff50c7c0c1c77c8243079283f4edb376f0f6442433aecb8ce7e6d0b92d1fe4", size = 219990 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/25/7a/b0178788f8dc6cafce37a212c99565fa1fe7872c70c6c9c1e1a372d9d88f/rich-14.2.0-py3-none-any.whl", hash = "sha256:76bc51fe2e57d2b1be1f96c524b890b816e334ab4c1e45888799bfaab0021edd", size = 243393 },
+]
+
+[[package]]
+name = "rich-rst"
+version = "1.3.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "docutils", version = "0.20.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.9'" },
+    { name = "docutils", version = "0.22.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.9'" },
+    { name = "rich" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/bc/6d/a506aaa4a9eaa945ed8ab2b7347859f53593864289853c5d6d62b77246e0/rich_rst-1.3.2.tar.gz", hash = "sha256:a1196fdddf1e364b02ec68a05e8ff8f6914fee10fbca2e6b6735f166bb0da8d4", size = 14936 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/13/2f/b4530fbf948867702d0a3f27de4a6aab1d156f406d72852ab902c4d04de9/rich_rst-1.3.2-py3-none-any.whl", hash = "sha256:a99b4907cbe118cf9d18b0b44de272efa61f15117c61e39ebdc431baf5df722a", size = 12567 },
 ]
 
 [[package]]

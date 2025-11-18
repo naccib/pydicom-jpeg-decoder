@@ -46,3 +46,11 @@ We regress against the [pylibjpeg-data](https://github.com/pydicom/pylibjpeg-dat
 
 We cannot control what final color space `jpeg-decoder` will return. It will always return `RGB` for 3-channel images. We therefore always set the photometric interpretation to `RGB`.
 
+## Benchmark results
+
+We compare the performance of `pydicom-jpeg-decoder` against `pylibjpeg` on the JPEG Lossless SV1 images from the [pylibjpeg-data](https://github.com/pydicom/pylibjpeg-data) dataset. Each image is decoded 100 times for each plugin. The table below shows the results, which essentially boil down to a **mean 42% improvement over `pylibjpeg`**.
+
+| Plugin               | Time (ms)       | Delta (%)        |
+| -------------------- | --------------- | ---------------- |
+| pydicom-jpeg-decoder | 44.51 (± 53.00) | -41.7% (± 33.6%) |
+| pylibjpeg            | 76.35 (± 92.08) | N/A              |
