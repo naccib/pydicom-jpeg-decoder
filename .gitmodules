@@ -1,0 +1,3 @@
+[submodule "vendor/jpeg-decoder"]
+	path = vendor/jpeg-decoder
+	url = https://github.com/image-rs/jpeg-decoder.git
