@@ -9,5 +9,5 @@ name = "pydicom_jpeg_decoder"
 crate-type = ["cdylib"]
 
 [dependencies]
-jpeg-decoder = "0.3.2"
+jpeg-decoder = { path = "vendor/jpeg-decoder" }
 pyo3 = "0.27.0"

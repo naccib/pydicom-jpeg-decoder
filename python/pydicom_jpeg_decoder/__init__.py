@@ -1,6 +1,9 @@
 import logging
+from pathlib import Path
+from uuid import uuid4
 
 from pydicom import uid
+from pydicom.pixels.common import PhotometricInterpretation as PI
 from pydicom.pixels.decoders.base import (
     DecodeRunner,
     JPEGBaseline8BitDecoder,
@@ -9,7 +12,7 @@ from pydicom.pixels.decoders.base import (
     JPEGLosslessSV1Decoder,
 )
 
-from .pydicom_jpeg_decoder import decode_jpeg  # noqa: F401
+from .pydicom_jpeg_decoder import decode_jpeg, determine_color_transform  # noqa: F401
 
 _LIBJPEG_SYNTAXES = [
     uid.JPEGBaseline8Bit,
@@ -39,23 +42,60 @@ def is_available(uid: str) -> bool:
 
 
 def decode_frame(src: bytes, runner: DecodeRunner) -> bytearray:
-    """Return the decoded image data in `src` as a :class:`bytearray`."""
+    """
+    Return the decoded image data in `src` as a :class:`bytearray`.
 
-    logger.info(
-        f"pydicom-jpeg-decoder: Decoding {len(src)} bytes for {runner.transfer_syntax}"
+    `jpeg_decoder` will _always_ return a color transform of `RGB` for 3-channel images. We therefore always set the photometric interpretation to `RGB`.
+    """
+
+    if runner.transfer_syntax == uid.JPEGExtended12Bit and runner.bits_stored != 8:
+        raise NotImplementedError(
+            "pydicom-jpeg-decoder only supports 8-bit precision JPEG Extended transfer syntax"
+        )
+
+    logger.info(f"Decoding {len(src)} bytes for {runner.transfer_syntax}")
+
+    decoded = decode_jpeg(src)
+
+    pi = runner.get_option("photometric_interpretation")
+    as_rgb = runner.get_option("as_rgb", False)
+
+    if runner.samples_per_pixel == 3:
+        logger.warning("3-channel images are always converted to RGB")
+        runner.set_option("photometric_interpretation", PI.RGB)
+
+    print(
+        f"DICOM says PI={pi}, samples_per_pixel={runner.samples_per_pixel}, and pydicom wants as_rgb={as_rgb} so convert_to_rgb={as_rgb and 'YBR' in pi}"
+    )
+    print(
+        f"Decoder says color_transform={decoded.color_transform} and adobe_color_transform={decoded.adobe_color_transform}, so determined_color_transform={decoded.determined_color_transform}"
     )
 
-    data = decode_jpeg(src)
+    data = decoded.pixel_data
 
-    logger.info(f"pydicom-jpeg-decoder: decoded {len(data)} bytes")
+    logger.info(f"Decoded {len(data)} bytes")
 
     return bytearray(data)
 
 
-def install_plugins():
-    """Install the plugins for the JPEG decoders."""
+def install_plugins(remove_existing: bool = False):
+    """
+    Install the plugins for the JPEG decoders.
+
+    Args:
+        remove_existing: Whether to remove the existing plugins for the JPEG transfer syntaxes supported before installing the new ones.
+            Defaults to False.
+    """
 
     for decoder in _DECODERS_TO_INSTALL:
+        previously_available_plugins = decoder.available_plugins
+
+        if remove_existing and len(previously_available_plugins) > 0:
+            for plugin in previously_available_plugins:
+                decoder.remove_plugin(plugin)
+
+                logger.info(f"{decoder.UID}: removed plugin {plugin}")
+
         decoder.add_plugins(
             [
                 ("pydicom-jpeg-decoder", ("pydicom_jpeg_decoder", "decode_frame")),

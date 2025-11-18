@@ -16,7 +16,9 @@ dependencies = ["pydicom>=2.4.4"]
 [dependency-groups]
 dev = [
     "httpx>=0.28.1",
+    "matplotlib>=3.7.5",
     "numpy>=1.24.4",
+    "pylibjpeg>=2.0.1",
     "pytest>=8.3.5",
     "pytest-asyncio>=0.24.0",
 ]
