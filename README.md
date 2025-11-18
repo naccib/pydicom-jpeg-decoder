@@ -54,3 +54,5 @@ We compare the performance of `pydicom-jpeg-decoder` against `pylibjpeg` on the 
 | -------------------- | --------------- | ---------------- |
 | pydicom-jpeg-decoder | 44.51 (± 53.00) | -41.7% (± 33.6%) |
 | pylibjpeg            | 76.35 (± 92.08) | N/A              |
+
+You can run it yourself by running `uv run tests/performance.py run` followed by `uv run tests/performance.py report`.
