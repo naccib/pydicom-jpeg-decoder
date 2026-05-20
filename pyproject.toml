@@ -11,7 +11,7 @@ classifiers = [
     "Programming Language :: Python :: Implementation :: PyPy",
 ]
 dynamic = ["version"]
-dependencies = ["pydicom>=2.4.4"]
+dependencies = ["pydicom>=2.4.4", "numpy>=1.24"]
 
 [dependency-groups]
 dev = [

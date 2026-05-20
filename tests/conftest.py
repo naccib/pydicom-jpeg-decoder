@@ -11,6 +11,6 @@ def setup_before_all_tests():
 
     from pydicom_jpeg_decoder import install_plugins
 
-    install_plugins()
+    install_plugins(remove_existing=True)
 
     yield

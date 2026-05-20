@@ -21,6 +21,8 @@ _LIBJPEG_SYNTAXES = [
     uid.JPEGLosslessSV1,
 ]
 
+_LOSSLESS_SYNTAXES = {uid.JPEGLossless, uid.JPEGLosslessSV1}
+
 _DECODERS_TO_INSTALL = [
     JPEGLosslessDecoder,
     JPEGLosslessSV1Decoder,
@@ -41,11 +43,34 @@ def is_available(uid: str) -> bool:
     return uid in _LIBJPEG_SYNTAXES
 
 
+def _ycbcr_to_rgb_full_range(data: bytes) -> bytes:
+    """
+    Convert interleaved 8-bit YCbCr samples to RGB using BT.601 full-range coefficients.
+    """
+    import numpy as np
+
+    yuv = np.frombuffer(data, dtype=np.uint8).reshape(-1, 3).astype(np.int32)
+    y = yuv[:, 0]
+    cb = yuv[:, 1] - 128
+    cr = yuv[:, 2] - 128
+
+    r = y + ((91881 * cr) >> 16)
+    g = y - ((22554 * cb + 46802 * cr) >> 16)
+    b = y + ((116130 * cb) >> 16)
+
+    rgb = np.stack([r, g, b], axis=1)
+    np.clip(rgb, 0, 255, out=rgb)
+    return rgb.astype(np.uint8).tobytes()
+
+
 def decode_frame(src: bytes, runner: DecodeRunner) -> bytearray:
     """
     Return the decoded image data in `src` as a :class:`bytearray`.
 
-    `jpeg_decoder` will _always_ return a color transform of `RGB` for 3-channel images. We therefore always set the photometric interpretation to `RGB`. Unfortunately this means we'll ignore whatever the requested photometric interpretation is.
+    For 3-channel images the returned bytes are always RGB and the runner's
+    photometric interpretation is set to ``RGB``. For lossless JPEG (Process 14)
+    the underlying decoder does not do colour conversion, so if the JPEG SOF
+    marker indicates YCbCr we convert YCbCr → RGB ourselves before returning.
 
     Args:
         src: The bytes of the JPEG image to decode.
@@ -67,9 +92,22 @@ def decode_frame(src: bytes, runner: DecodeRunner) -> bytearray:
     pi = runner.get_option("photometric_interpretation")
     as_rgb = runner.get_option("as_rgb", False)
 
+    data = decoded.pixel_data
+
+    if (
+        runner.samples_per_pixel == 3
+        and runner.transfer_syntax in _LOSSLESS_SYNTAXES
+        and decoded.determined_color_transform == "YCbCr"
+    ):
+        if runner.bits_stored != 8:
+            raise NotImplementedError(
+                "pydicom-jpeg-decoder only supports YCbCr→RGB conversion for 8-bit lossless JPEG"
+            )
+        logger.info("Lossless JPEG SOF reports YCbCr; converting to RGB")
+        data = _ycbcr_to_rgb_full_range(data)
+
     # NOTE: We always set the photometric interpretation to `RGB` for 3-channel images.
     if runner.samples_per_pixel == 3:
-        logger.warning("3-channel images are always converted to RGB")
         runner.set_option("photometric_interpretation", PI.RGB)
 
     logger.debug(
@@ -78,8 +116,6 @@ def decode_frame(src: bytes, runner: DecodeRunner) -> bytearray:
     logger.debug(
         f"Decoder says color_transform={decoded.color_transform} and adobe_color_transform={decoded.adobe_color_transform}, so determined_color_transform={decoded.determined_color_transform}"
     )
-
-    data = decoded.pixel_data
 
     logger.info(f"Decoded {len(data)} bytes")
 

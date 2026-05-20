@@ -44,7 +44,11 @@ We test against the [pylibjpeg-data](https://github.com/pydicom/pylibjpeg-data) 
 
 ## Color conversion details
 
-We cannot control what final color space `jpeg-decoder` will return. It will always return `RGB` for 3-channel images. We therefore always set the photometric interpretation to `RGB`.
+For 3-channel images we always return `RGB` data and set the photometric interpretation to `RGB`.
+
+For JPEG Baseline / Extended, the underlying `jpeg-decoder` crate already performs any YCbCr→RGB conversion internally, so we just pass the bytes through.
+
+For JPEG Lossless (Process 14 / SV1) the decoder performs **no** colour conversion — it returns the raw samples as encoded. The DICOM `PhotometricInterpretation` tag is not always reliable here, so we inspect the JPEG SOF marker directly: if it indicates `YCbCr` we run a BT.601 full-range YCbCr→RGB conversion in this library before returning the data to pydicom.
 
 ## Benchmark results
 
